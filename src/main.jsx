@@ -18,6 +18,7 @@ import { Pagamento } from "./pages/Pagamento";
 const rotas = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Login />}>
+      <Route index element={<Login />} />
       <Route path="home" element={<Home />} />
       <Route path="pagamento" element={<Pagamento />} />
       <Route path="estudante" element={<Estudante />} />
