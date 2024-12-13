@@ -1,15 +1,13 @@
 import { Sidebar } from "../components/Sidebar";
 
+
 export function Home() {
     return (
         <div className="flex min-h-screen">
-            {/* Sidebar */}
             <Sidebar />
 
-            {/* Conteúdo Principal */}
             <div className="flex-grow bg-gray-50">
                 <header className="flex w-full justify-between items-center px-4 py-2 bg-gray-100 shadow">
-                    {/* Botão voltar (à esquerda) */}
                     <button className="p-2">
                         <svg
                             width="18"
@@ -25,7 +23,6 @@ export function Home() {
                         </svg>
                     </button>
                     
-                    {/* Input de busca com lupa embutida */}
                     <div className="relative flex-1 mx-4">
                         <input
                             type="text"
@@ -47,7 +44,6 @@ export function Home() {
                         </svg>
                     </div>
                     
-                    {/* Ícone de sino (à direita) */}
                     <button className="p-2">
                         <svg
                             width="18"

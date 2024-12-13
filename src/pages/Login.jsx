@@ -1,19 +1,7 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export function Login() {
-    const navigate = useNavigate(); // Hook para navegação no React Router
 
-    const verifica = () => {
-        const email = document.querySelector("[name='email']").value;
-        const senha = document.querySelector("[name='senha']").value;
-
-        // if (email === "admin@gmail.com" && senha === "admin") {
-        //     navigate("/home"); // Navega para a rota "/home"
-        // } else {
-        //     alert("Credenciais inválidas. Tente novamente.");
-        // }
-        navigate("/home"); // Navega para a rota "/home"
-    };
 
     return (
         <div className="flex items-center justify-center w-screen h-screen bg-yellow-500">
@@ -37,7 +25,6 @@ export function Login() {
                             className="w-full h-12 px-2 border-2 rounded focus:outline-none"
                             type="text"
                             placeholder="Entre com seu email..."
-                            name="email" // Adicionado o atributo name
                         />
                     </div>
 
@@ -47,18 +34,17 @@ export function Login() {
                             className="w-full h-12 px-2 border-2 rounded focus:outline-none"
                             type="password"
                             placeholder="Entre com sua senha..."
-                            name="senha" // Adicionado o atributo name
+
                         />
                     </div>
                 </main>
 
                 <footer className="w-full">
-                    <button
-                        onClick={verifica} // Adicionado o evento onClick
-                        className="w-3/4 h-12 text-white bg-yellow-500 rounded-lg hover:bg-yellow-400"
+                    <NavLink className="w-3/4 h-12 text-white bg-yellow-500 rounded-lg hover:bg-yellow-400"
+                        to="/home"
                     >
                         <strong>SIGN IN</strong>
-                    </button>
+                    </NavLink>
                 </footer>
             </div>
         </div>

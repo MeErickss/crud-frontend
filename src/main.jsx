@@ -14,16 +14,24 @@ import { Pagina404 } from "./pages/Pagina404";
 import { Estudante } from "./pages/Estudante";
 import { Pagamento } from "./pages/Pagamento";
 
-
 const rotas = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Login />}>
-      <Route index element={<Login />} />
-      <Route path="home" element={<Home />} />
-      <Route path="pagamento" element={<Pagamento />} />
-      <Route path="estudante" element={<Estudante />} />
+    <>
+      {/* Rota principal de login */}
+      <Route path="/" element={<Login />} />
+      
+      {/* Rota para home */}
+      <Route path="/home" element={<Home />} />
+      
+      {/* Rota para pagamento */}
+      <Route path="/pagamento" element={<Pagamento />} />
+      
+      {/* Rota para estudante */}
+      <Route path="/estudante" element={<Estudante />} />
+      
+      {/* Rota para páginas não encontradas */}
       <Route path="*" element={<Pagina404 />} />
-    </Route>
+    </>
   )
 );
 
